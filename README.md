@@ -1,10 +1,15 @@
 Сделано на laravel+vue и amocrm sdk
 
 В директории выполнить скрипты
+
 composer install
+
 npm install
+
 npm run dev
+
 cp -a .env.example .en
+
 php artisan key:generate
 
 Я запускал на локальном сервере laravel
