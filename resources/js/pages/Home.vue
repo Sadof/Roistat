@@ -91,7 +91,7 @@ export default {
         this.$set(this.error, "email", "Заполните email");
       }
       if (!this.phone || this.phone.length != 11) {
-        this.$set(this.error, "phone", "Заполните телефон");
+        this.$set(this.error, "phone", "Телефон должен содержать 11 символов");
       }
       if (!this.price || !this.price.length) {
         this.$set(this.error, "price", "Заполните цену");

@@ -25,13 +25,15 @@ class Amo
             $apiClient->setAccessToken($accessToken)
                 ->setAccountBaseDomain($options['base_domain'])
                 ->onAccessTokenRefresh(
-                    function (AccessTokenInterface $accessToken, string $baseDomain) {
-                        // $options = json_encode([
-                        //     'access_token' => $accessToken->getToken(),
-                        //     'refresh_token' => $accessToken->getRefreshToken(),
-                        //     'expires' => $accessToken->getExpires(),
-                        //     'base_domain' => $baseDomain,
-                        // ]);
+                    function (AccessTokenInterface $accessToken, string $baseDomain) use(&$options) {
+
+                        /// Требуется тут обновлять информацю с опцямии в базе 
+                        $options = json_encode([
+                            'access_token' => $accessToken->getToken(),
+                            'refresh_token' => $accessToken->getRefreshToken(),
+                            'expires' => $accessToken->getExpires(),
+                            'base_domain' => $baseDomain,
+                        ]);
                     }
                 );
         } catch (Exception $ex) {
