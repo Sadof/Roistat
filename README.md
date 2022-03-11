@@ -4,6 +4,8 @@
 composer install
 npm install
 npm run dev
+cp -a .env.example .en
+php artisan key:generate
 
 Я запускал на локальном сервере laravel
 php artisan serve
