@@ -13,7 +13,9 @@ cp -a .env.example .en
 php artisan key:generate
 
 Я запускал на локальном сервере laravel
+
 php artisan serve
+
 и доступ по нему будет по localhost:8000
 
 После нажатия на Подключить Амо, у меня интеграция имеет статут private https://imgur.com/a/hgadpZu, и возможно не будет работать.
